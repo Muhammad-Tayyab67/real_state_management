@@ -61,6 +61,46 @@ In order to ensure that the Laravel community is welcoming to all, please review
 
 If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
+# Project Name
+
+Brief description of your Laravel project.
+
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Table of Contents
+
+- [Installation](#installation)
+  - [Prerequisites](#prerequisites)
+  - [Installation Steps](#installation-steps)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Installation
+
+### Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+- [Composer](https://getcomposer.org/download/)
+- [PHP](https://www.php.net/downloads.php)
+- [Laravel](https://laravel.com/docs/8.x/installation#installation-via-composer)
+
+### Installation Steps
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/yourusername/your-repo.git
+2. Install project dependencies:
+    composer install
+
+3. Create a '.env' file by copying the example:
+
+4. Open the .env file and configure your database connection by changing the DB_DATABASE, DB_USERNAME, and DB_PASSWORD values.
+
+5. Generate the application key
+    php artisan key:generate
+
+
