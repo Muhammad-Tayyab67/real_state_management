@@ -92,18 +92,25 @@ Before you begin, ensure you have met the following requirements:
 1. Clone the repository:
 
    ```sh
-   git clone [https://github.com/yourusername/your-repo.git](https://github.com/Muhammad-Tayyab67/real_state_management.git)
-2. Install project dependencies:
- ```sh
-    composer install
+   git clone https://github.com/Muhammad-Tayyab67/real_state_management.git
+2. Install Composer Dependencies:
+   ```sh
+   composer install
+   
+3. Create a .env File:
+Open the .env file and configure your database connection by changing the DB_DATABASE, DB_USERNAME, and DB_PASSWORD values.
 
-3. Create a '.env' file by copying the example:
-
-4. Open the .env file and configure your database connection by changing the DB_DATABASE, DB_USERNAME, and DB_PASSWORD values.
-
-5. Generate the application key
- ```sh
-    php artisan key:generate
+4. Generate an Application Key:
+    ```sh
+   php artisan key:generate
     
+5. Run Database Migrations:
+    ```sh
+   php artisan migrate
+    
+6. Serve the Application:
+    ```sh
+   php artisan serve
+Your Laravel application will be available at http://localhost:8000.
 
-
+Now you're ready to start using the Laravel project.
