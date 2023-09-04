@@ -94,6 +94,7 @@ Before you begin, ensure you have met the following requirements:
    ```sh
    git clone https://github.com/yourusername/your-repo.git
 2. Install project dependencies:
+ ```sh
     composer install
 
 3. Create a '.env' file by copying the example:
