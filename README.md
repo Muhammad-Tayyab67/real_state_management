@@ -92,7 +92,7 @@ Before you begin, ensure you have met the following requirements:
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/yourusername/your-repo.git
+   git clone [https://github.com/yourusername/your-repo.git](https://github.com/Muhammad-Tayyab67/real_state_management.git)
 2. Install project dependencies:
  ```sh
     composer install
@@ -102,6 +102,8 @@ Before you begin, ensure you have met the following requirements:
 4. Open the .env file and configure your database connection by changing the DB_DATABASE, DB_USERNAME, and DB_PASSWORD values.
 
 5. Generate the application key
+ ```sh
     php artisan key:generate
+    
 
 
