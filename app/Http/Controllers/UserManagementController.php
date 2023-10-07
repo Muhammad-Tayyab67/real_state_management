@@ -73,7 +73,7 @@ class UserManagementController extends Controller
             $path = $request->file('profilePicture')->store('public/profilePictures/'.$user->id.'/');
 
             //get img src url
-            $url = asset('storage/profilePictures/' . basename($path));
+            $url = asset('storage/profilePictures/' . $user->id . '/' . basename($path));
 
             //updating user
             $user->update([
