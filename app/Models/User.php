@@ -43,4 +43,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //get plots of user from share table
+    public function plots()
+    {
+        return $this->belongsToMany(Plot::class, 'shares');
+    }
 }
