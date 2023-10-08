@@ -47,6 +47,6 @@ class User extends Authenticatable
     //get plots of user from share table
     public function plots()
     {
-        return $this->belongsToMany(Plot::class, 'shares');
+        return $this->belongsToMany(Plot::class, 'shares', 'user_id', 'plot_id')->withPivot('share_number', 'share_price', 'share_status');
     }
 }

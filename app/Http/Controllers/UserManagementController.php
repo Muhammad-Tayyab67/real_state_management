@@ -94,4 +94,46 @@ class UserManagementController extends Controller
             'user' => $user,
         ]);
     }
+
+    //delete user
+    public function delete($id)
+    {
+        // finding user
+        $user = User::find($id);
+        if (!$user) {
+            return response()->json([
+                'success' => false,
+                'message' => 'User not found',
+            ]);
+        }
+
+        //Deleting existing image
+        if ($user->profilePicture) {
+            $existingImagePath = basename($user->profilePicture);
+
+            Storage::delete('public/profilePictures/'. $user->id. '/' . $existingImagePath);
+        }
+
+        // deleting user
+        $user->delete();
+
+        // returning response
+        return response()->json([
+            'success' => true,
+            'message' => 'User deleted successfully',
+        ]);
+    }
+
+    //get plots of user from share table
+    public function plots()
+    {
+        $user = auth()->user();
+
+        $plots = $user->plots;
+
+        return response()->json([
+            'success' => true,
+            'plots' => $plots,
+        ]);
+    }
 }
