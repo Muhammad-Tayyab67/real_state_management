@@ -92,6 +92,13 @@ class PlotManagementController extends Controller
         //get plots
         $plots = Plot::all();
 
+        //get plot documents
+        foreach ($plots as $plot) {
+            $documents = $plot->documents;
+
+            $plot->documents = $documents;
+        }
+
         // returning response
         return response()->json([
             'success' => true,
