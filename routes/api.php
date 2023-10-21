@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
-use App\Http\Controllers\{UserManagementController, PlotManagementController, ShareManagementController};
+use App\Http\Controllers\{UserManagementController, PlotManagementController, ShareManagementController, ChatController};
 
 
 Route::post('/register', [AuthController::Class, 'register']);
@@ -26,6 +26,11 @@ Route::middleware('auth:sanctum')->group(function () {
 
     //ShareManagement
     Route::post('/share/buy', [ShareManagementController::class, 'BuyShare']);
+
+    //Chat Management
+    Route::post('/chat/send', [ChatController::class, 'sendMessage']);
+    Route::get('/chat/list', [ChatController::class, 'getChatRooms']);
+    Route::get('/chat/show/{id}', [ChatController::class, 'getChatRoomMessages']);
 });
 
 
