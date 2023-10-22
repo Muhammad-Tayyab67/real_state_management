@@ -19,6 +19,8 @@ class AuthController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8',
             'userType' => 'required|string|max:255',
+            //phone number validation 11 integer
+            'phoneNumber' => 'required|integer|digits:11',
         ]);
 
         // returning error message on validation fail
@@ -33,6 +35,7 @@ class AuthController extends Controller
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
+            'phoneNumber' => $request->phoneNumber,
             // hashing password
             'password' => Hash::make($request->password),
             'userType' => $request->userType,

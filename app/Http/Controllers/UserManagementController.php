@@ -41,6 +41,8 @@ class UserManagementController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'userType' => 'required|string|max:255',
+            //phone number validation 11 integer
+            'phoneNumber' => 'required|integer|digits:11',
             'profilePicture' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
