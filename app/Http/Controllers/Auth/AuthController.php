@@ -20,7 +20,7 @@ class AuthController extends Controller
             'password' => 'required|string|min:8',
             'userType' => 'required|string|max:255',
             //phone number validation 11 integer
-            'phoneNumber' => 'required|integer|digits:11',
+            'phoneNumber' => 'required|string|max:255',
         ]);
 
         // returning error message on validation fail

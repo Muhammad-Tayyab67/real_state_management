@@ -42,7 +42,7 @@ class UserManagementController extends Controller
             'name' => 'required|string|max:255',
             'userType' => 'required|string|max:255',
             //phone number validation 11 integer
-            'phoneNumber' => 'required|integer|digits:11',
+            'phoneNumber' => 'required|string|max:255',
             'profilePicture' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
